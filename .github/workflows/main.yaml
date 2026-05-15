@@ -29,6 +29,6 @@ jobs:
           username: ${{secrets.GCP_USER}}
           key: ${{secrets.GCP_KEY}}
           script: |
-            sg docker -c "docker pull premchandpamidi/test:v1"
-            sg docker -c "docker rm -f test || true"
-            sg docker -c "docker run -d --name test -p 8095:80 premchandpamidi/test:v1"
+            docker pull premchandpamidi/test:v1
+            doccker rm -f test || true
+            docker run -d --name test -p 8095:80 premchandpamidi/test:v1
